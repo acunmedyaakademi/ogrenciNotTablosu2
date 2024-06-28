@@ -8,6 +8,10 @@ let mobile = document.querySelector(".mobile");
 if (localStorage.students) {
   students = JSON.parse(localStorage.students);
   renderStudents();
+  addData.disabled = true;
+} else {
+  addData.disabled = false;
+
 }
 
 if (localStorage.id) {
@@ -19,6 +23,349 @@ function generateId() {
   localStorage.id = id;
   return id;
 }
+
+addData.addEventListener("click", function () {
+  students = [
+    ...students,
+    {
+      id: 1,
+      name: "Nihat",
+      lastname: "Duysak",
+      section: "Frontend",
+      midterm1: 80,
+      midterm2: 75,
+      final: 85,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 2,
+      name: "Ayşe",
+      lastname: "Yılmaz",
+      section: "Frontend",
+      midterm1: 60,
+      midterm2: 70,
+      final: 75,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 3,
+      name: "Mehmet",
+      lastname: "Kaya",
+      section: "Frontend",
+      midterm1: 85,
+      midterm2: 80,
+      final: 90,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 4,
+      name: "Fatma",
+      lastname: "Demir",
+      section: "Frontend",
+      midterm1: 70,
+      midterm2: 65,
+      final: 80,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 5,
+      name: "Ali",
+      lastname: "Çelik",
+      section: "Frontend",
+      midterm1: 75,
+      midterm2: 70,
+      final: 85,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 6,
+      name: "Esra",
+      lastname: "Öz",
+      section: "Frontend",
+      midterm1: 90,
+      midterm2: 85,
+      final: 95,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 7,
+      name: "Can",
+      lastname: "Şahin",
+      section: "Frontend",
+      midterm1: 65,
+      midterm2: 60,
+      final: 70,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 8,
+      name: "Murat",
+      lastname: "Arslan",
+      section: "Frontend",
+      midterm1: 80,
+      midterm2: 75,
+      final: 85,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 9,
+      name: "Derya",
+      lastname: "Aksoy",
+      section: "Frontend",
+      midterm1: 85,
+      midterm2: 80,
+      final: 90,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 10,
+      name: "Serkan",
+      lastname: "Eren",
+      section: "Frontend",
+      midterm1: 70,
+      midterm2: 75,
+      final: 80,
+      grade: "",
+      note: "",
+    },
+
+    {
+      id: 11,
+      name: "Berk",
+      lastname: "Yıldız",
+      section: "Backend",
+      midterm1: 75,
+      midterm2: 70,
+      final: 80,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 12,
+      name: "Zeynep",
+      lastname: "Karaca",
+      section: "Backend",
+      midterm1: 80,
+      midterm2: 85,
+      final: 90,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 13,
+      name: "Emre",
+      lastname: "Bulut",
+      section: "Backend",
+      midterm1: 65,
+      midterm2: 70,
+      final: 75,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 14,
+      name: "Hülya",
+      lastname: "Güneş",
+      section: "Backend",
+      midterm1: 70,
+      midterm2: 75,
+      final: 80,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 15,
+      name: "Okan",
+      lastname: "Işık",
+      section: "Backend",
+      midterm1: 85,
+      midterm2: 80,
+      final: 90,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 16,
+      name: "Seda",
+      lastname: "Polat",
+      section: "Backend",
+      midterm1: 75,
+      midterm2: 80,
+      final: 85,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 17,
+      name: "Furkan",
+      lastname: "Yücel",
+      section: "Backend",
+      midterm1: 80,
+      midterm2: 75,
+      final: 85,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 18,
+      name: "Gizem",
+      lastname: "Kılıç",
+      section: "Backend",
+      midterm1: 90,
+      midterm2: 85,
+      final: 95,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 19,
+      name: "Tuna",
+      lastname: "Koç",
+      section: "Backend",
+      midterm1: 65,
+      midterm2: 70,
+      final: 75,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 20,
+      name: "Ece",
+      lastname: "Er",
+      section: "Backend",
+      midterm1: 70,
+      midterm2: 75,
+      final: 80,
+      grade: "",
+      note: "",
+    },
+
+    {
+      id: 21,
+      name: "Deniz",
+      lastname: "Aydın",
+      section: "Mobile",
+      midterm1: 75,
+      midterm2: 80,
+      final: 85,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 22,
+      name: "Efe",
+      lastname: "Duman",
+      section: "Mobile",
+      midterm1: 70,
+      midterm2: 75,
+      final: 80,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 23,
+      name: "Buse",
+      lastname: "Taş",
+      section: "Mobile",
+      midterm1: 80,
+      midterm2: 85,
+      final: 90,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 24,
+      name: "Umut",
+      lastname: "Öztürk",
+      section: "Mobile",
+      midterm1: 85,
+      midterm2: 80,
+      final: 90,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 25,
+      name: "Merve",
+      lastname: "Sevgi",
+      section: "Mobile",
+      midterm1: 75,
+      midterm2: 70,
+      final: 85,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 26,
+      name: "Ozan",
+      lastname: "Uslu",
+      section: "Mobile",
+      midterm1: 70,
+      midterm2: 75,
+      final: 80,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 27,
+      name: "Fırat",
+      lastname: "Can",
+      section: "Mobile",
+      midterm1: 85,
+      midterm2: 80,
+      final: 90,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 28,
+      name: "Gökçe",
+      lastname: "Deniz",
+      section: "Mobile",
+      midterm1: 80,
+      midterm2: 75,
+      final: 85,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 29,
+      name: "Hakan",
+      lastname: "Kurt",
+      section: "Mobile",
+      midterm1: 75,
+      midterm2: 70,
+      final: 80,
+      grade: "",
+      note: "",
+    },
+    {
+      id: 30,
+      name: "Sinem",
+      lastname: "Yalçın",
+      section: "Mobile",
+      midterm1: 80,
+      midterm2: 85,
+      final: 90,
+      grade: "",
+      note: "",
+    },
+  ];
+
+  save();
+  renderStudents();
+
+  addData.disabled = true;
+});
 
 addStudentsBtn.addEventListener("click", () => {
   modal.classList.remove("editModal");
@@ -34,7 +381,7 @@ function handleStudentsForm() {
   if (formObj.id !== "") {
     let student = students.find((x) => x.id === Number(formObj.id));
     student.name = formObj.name;
-    student.lname = formObj.lname;
+    student.lastname = formObj.lastname;
     student.section = formObj.section;
     student.vize1 = formObj.vize1;
     student.vize2 = formObj.vize2;
@@ -45,7 +392,7 @@ function handleStudentsForm() {
     students.push({
       id: generateId(),
       name: formObj.name,
-      lastname: formObj.lname,
+      lastname: formObj.lastname,
       section: formObj.section,
       vize1: Number(formObj.vize1),
       vize2: Number(formObj.vize2),
@@ -140,7 +487,7 @@ function handleEditBtn(e) {
 
   document.querySelector('input[name = "id"]').value = student.id;
   document.querySelector('input[name = "name"]').value = student.name;
-  document.querySelector('input[name = "lname"]').value = student.lname;
+  document.querySelector('input[name = "lastname"]').value = student.lastname;
   document.querySelector('select[name = "section"]').value = student.section;
   document.querySelector('input[name = "vize1"]').value = student.vize1;
   document.querySelector('input[name = "vize2"]').value = student.vize2;
