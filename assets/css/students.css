@@ -1,0 +1,150 @@
+  
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  border-radius: 16px;
+  border: none;
+  padding: 8px;
+}
+
+button:hover {
+  background-color: rgb(47, 80, 80);
+  color: antiquewhite;
+  cursor: pointer;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  background-color: #fefefe;
+  padding: 24px;
+}
+
+.studentsHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.studentsHeader button {
+  padding-inline: 16px;
+}
+
+.students {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input {
+ max-width: 100%;
+}
+
+.a {
+  display: flex;
+  gap: 24px;
+}
+
+.b{
+  display: flex;
+  flex-direction: column;
+}
+
+.tablo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+.tablo h1 {
+  color:  red;
+  text-align: center;
+}
+
+.frontEnd {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+}
+
+
+.backend {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+}
+
+.mobile {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+}
+.student {
+  background-color: antiquewhite;
+  border-radius: 16px;
+  padding: 24px;
+  width: fit-content;
+}
+
+.movie {
+  background-color: rgb(47, 80, 80);
+  border-radius: 8px;
+  padding: 16px;
+  color: #fefefe;
+}
+
+.movie h5 {
+  text-transform: uppercase;
+}
+
+.modelEdit {
+  display: none;
+}
+
+.editModal .modelEdit {
+  display: initial;
+}
+
+.editModal .modelAddNew {
+  display: none;
+}
+
+dialog {
+ margin: auto;
+  padding: 10px;
+}
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+.movieEditControls a svg {
+  display: inline;
+  width: 16px;
+  fill: black;  
+}
